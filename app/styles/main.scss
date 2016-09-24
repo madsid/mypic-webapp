@@ -1,0 +1,155 @@
+// bower:scss
+// endbower
+
+body {
+  padding: 0;
+}
+
+.Vidage__backdrop,.Vidage__image{
+  position:absolute;top:0;right:0;bottom:0;left:0; width:100%;
+  }
+.Vidage--allow .Vidage__video{display:block}
+.Vidage--allow .Vidage__image{display:none}
+.Vidage{
+  position:fixed;top:15vh;right:0;bottom:0;left:0;z-index:-1
+  }
+.Vidage__video{
+  position:absolute;
+  top:0;
+  left:50%;
+  height:100%;
+  -webkit-transform:translateX(-50%);
+  -ms-transform:translateX(-50%);
+  transform:translateX(-50%);
+  display:none;
+}
+.Vidage__image{background-image:url(../images/bg.jpg);background-position:50%;background-repeat:no-repeat;background-size:cover}.Vidage__backdrop{background-color:#1b1c1d;background-image:url(../images/overlay.png);opacity:.1}
+
+a{
+  color: #44cfd2;
+}
+
+
+.logo{
+  height: 15vh;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: left;
+  padding: 10px;
+}
+.logo img{
+  height: 100%;
+}
+ul.nav li a{
+  padding-top: calc(7.5vh - 10px);
+  padding-bottom: calc(7.5vh - 10px);
+}
+.custom-ham{
+  margin-top: calc(7.5vh - 10px);
+  margin-bottom: calc(7.5vh - 10px);
+}
+.nav-pills li.active a{
+  background-color: #44cfd2;
+}
+.nav-pills li a{
+  border-radius: 0px;
+}
+.nav-pills li a:hover{
+    background-color: #44cfd2;
+    color: #fff;
+}
+.play-store{
+  right: 0;
+  position: absolute;
+  bottom:0;
+  width: 20vw;
+}
+.play-store a img{
+  width: 100%;
+}
+.details{
+  position: absolute;
+  top: 100vh;
+  background: #fff;
+  padding: 0px 0px;
+  width: 100%;
+  margin: 0 auto;
+}
+.about h1, .contact h1{
+  padding-top: 18vh;
+  text-align: center;
+}
+.about, .contact{
+  min-height: 65vh;
+  padding: 0px;
+}
+.about {
+  background-color: #44cfd2;
+  color: #fff;
+}
+.contact {
+    background-color: #44cfd2;
+  color: #fff;
+}
+
+#image1{
+    width: 100%;
+    height: auto;
+}
+
+#footer{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+#footer a{
+    text-decoration: none;
+    color: black;
+}
+
+.header{
+  height: 65px;
+}
+
+.mypic{
+  margin-top: 15px;
+  margin-bottom: 20px;
+  background-color: #f4f4f4;
+  min-height: 500px;
+  border-radius: 9px;
+
+  .header{
+    text-align: center;
+  }
+  .form-horizontal{
+    margin-top: 20px;
+  }
+}
+
+
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
