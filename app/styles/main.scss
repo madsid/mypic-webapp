@@ -3,6 +3,7 @@
 
 body {
   padding: 0;
+  width: 100%;
 }
 
 .Vidage__backdrop,.Vidage__image{
@@ -25,11 +26,13 @@ body {
 }
 .Vidage__image{background-image:url(../images/bg.jpg);background-position:50%;background-repeat:no-repeat;background-size:cover}.Vidage__backdrop{background-color:#1b1c1d;background-image:url(../images/overlay.png);opacity:.1}
 
+.main-view{
+  padding: 0;
+}
+
 a{
   color: #44cfd2;
 }
-
-
 .logo{
   height: 15vh;
   -webkit-box-sizing: border-box;
@@ -40,6 +43,11 @@ a{
 }
 .logo img{
   height: 100%;
+}
+.navbar{
+  background: #fff;
+  border: none;
+  box-shadow: 0 0 25px rgba(51, 51, 51, 0.15);
 }
 ul.nav li a{
   padding-top: calc(7.5vh - 10px);
@@ -72,41 +80,65 @@ ul.nav li a{
   position: absolute;
   top: 100vh;
   background: #fff;
-  padding: 0px 0px;
+  padding: 0px 15px;
   width: 100%;
   margin: 0 auto;
 }
 .about h1, .contact h1{
-  padding-top: 18vh;
   text-align: center;
+  display: inline-block;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 .about, .contact{
-  min-height: 65vh;
-  padding: 0px;
+  padding: 20px;
 }
 .about {
-  background-color: #44cfd2;
+  background: #fff url('../images/bg_about.png') bottom no-repeat;
+  background-size: cover;
+  color: #015a5c;
+  min-height: 100vh;
+
+}
+.about h1{
+  background: #44CFD2;
   color: #fff;
+}
+.about-box{
+  padding: 20px;
+}
+.about-box-content{
+  text-align: center;
+  background: rgba(255,255,255,0.8);
+  padding: 20px;
+  box-shadow: 0 0 5px #ddd;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.about-box-content img{
+  padding: 20px;
+  width: 120px;
+}
+.about-box-content h2{
+  font-size: 1.5em;
+  font-weight: bold;
+  border-bottom: solid 1px rgba(1,90,92,.2);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 .contact {
-    background-color: #44cfd2;
+  background-color: #44cfd2;
   color: #fff;
+  text-align: center;
 }
-
-#image1{
-    width: 100%;
-    height: auto;
+.contact h1{
+  background: #fff;
+  color: #44cfd2;
 }
-
-#footer{
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
-}
-
-#footer a{
-    text-decoration: none;
-    color: black;
+.contact-container{
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto 10px;
 }
 
 .header{
@@ -128,7 +160,27 @@ ul.nav li a{
   }
 }
 
+#image1{
+    width: 100%;
+    height: auto;
+}
 
+#footer{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 20vw;
+    padding: 5px;
+}
+
+#footer a{
+    text-decoration: none;
+    color: black;
+}
+
+#footer a img{
+  width: 100%;
+}
 
 
 /* Responsive: Portrait tablets and up */
@@ -151,5 +203,8 @@ ul.nav li a{
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+  }
+  #footer{
+      width: 10vw;
   }
 }
