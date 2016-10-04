@@ -10,6 +10,47 @@
 angular.module('webappsApp')
   .controller('MypicCtrl', ['$scope','$http',function ($scope, $http) {
     $scope.user = {};
+    $scope.isLogged = false;
+
+    function RenderSignIn(){
+        gapi.signin2.render('g-signin2', {
+            'scope': 'profile email',
+            'width': 240,
+            'height': 50,
+            'longtitle': true,
+            'theme': 'light',
+            'onsuccess': $scope.onSignIn,
+            'onfailure': $scope.onFailure
+        });
+
+    }
+    gapi.load('auth2', function() {
+      gapi.auth2.init().then(function(data){
+         RenderSignIn();
+      });
+    });
+
+    $scope.onSignIn = function(googleUser){
+        $scope.isLogged = true;
+        $scope.$apply();
+        var profile = googleUser.getBasicProfile();
+        console.log(profile);
+
+        $scope.user.email = profile.U3;
+    };
+
+    $scope.onFailure = function(){
+      $scope.isLogged = false;
+    }
+
+    $scope.signOut = function(){
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function(){
+        $scope.isLogged = false;
+        $scope.$apply();
+        RenderSignIn();
+      });
+    }
 
     document.getElementById('inputImage').addEventListener('change', function(){
       var file = this.files[0];  
