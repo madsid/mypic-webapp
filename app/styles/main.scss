@@ -171,7 +171,7 @@ ul.nav li a{
 }
 
 #footer{
-    position: absolute;
+    position: relative;
     left: 0px;
     bottom: 0px;
     width: 20vw;
@@ -187,7 +187,15 @@ ul.nav li a{
   width: 100%;
 }
 
+/* terms and conditions css */
+.tnc-text{
+  display: none;
+  margin: 5px auto;
+}
 
+.tnc-text ul{
+  padding: 10px 20px;
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {

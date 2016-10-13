@@ -14,3 +14,13 @@ $(window).scroll(function(){
       $('.custom-ham').css({'margin-top' : 'calc(7.5vh - 10px)', 'margin-bottom' : 'calc(7.5vh - 10px)'});
     }
 });
+//function to toggle Terms and conditions
+function toggleTnC(){
+  ($('.tnc-text').css('display')=='none')?(
+    $('.tnc-text').show(),
+    $('.tnc-arrow').html('<span class="glyphicon glyphicon-chevron-up"></span>')
+  ):(
+    $('.tnc-text').hide(),
+    $('.tnc-arrow').html('<span class="glyphicon glyphicon-chevron-down"></span>')
+  );
+}
