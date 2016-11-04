@@ -166,7 +166,6 @@ ul.nav li a{
 }
 
 #g-signin2{
-  margin-left: 32%;
   margin-top: 20%;
 }
 
@@ -213,10 +212,10 @@ ul.nav li a{
   .header {
     margin-bottom: 30px;
   }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+  #g-signin2{
+    margin-left: 30%;
   }
+
   #footer{
       width: 10vw;
   }
